@@ -16,12 +16,10 @@ const images = [
 const markup = images
   .map(
     ({ url, alt }) =>
-      `<li><img src = '${url}' alt = '${alt}' height = "300px"/></li>`,
+      `<li class = gallery__item><img src = '${url}' alt = '${alt}' height = "300px"/></li>`,
   )
   .join('');
 console.log(markup);
 
 const galleryEl = document.querySelector('.gallery');
 galleryEl.insertAdjacentHTML('afterbegin', markup);
-const galleryItem = galleryEl.querySelectorAll('li');
-galleryItem.forEach(item => item.classList.add('gallery__item'));
