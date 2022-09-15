@@ -15,8 +15,8 @@ const createBoxes = amount => {
     div.style.width = `${30 + 10 * i}px`;
     div.style.height = `${30 + 10 * i}px`;
     divs.push(div);
-    boxesEl.append(...divs);
   }
+  boxesEl.append(...divs);
 };
 
 buttonCreate.addEventListener('click', () => createBoxes(inputEl.value));
